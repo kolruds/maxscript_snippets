@@ -1,6 +1,6 @@
 /******************************************************************************
 **
-**	Check array difference- Bitarray Method
+**  Check array difference- Bitarray Method
 **
 ******************************************************************************/
 
@@ -23,11 +23,11 @@ print ("#")
 --------------------------------------------------------------------------------
 -- This can also easily be made as functions.
 fn array_difference array1 array2 = (
-	array_diff = sort ((array1 as bitarray - array2 as bitarray)as array)
+    array_diff = sort ((array1 as bitarray - array2 as bitarray)as array)
 )
 
 fn array_shared array1 array2 = (
-	array_same = sort ((array1 as bitarray * array2 as bitarray)as array)
+    array_same = sort ((array1 as bitarray * array2 as bitarray)as array)
 )
 
 -- The output would still be the same:
@@ -44,14 +44,14 @@ print ("#")
 --------------------------------------------------------------------------------
 -- This can also be put in a struct, for a more object oriented feel:
 struct compare_array (
-	array1, 
-	array2,
-	fn diff = (
-		array_diff = sort ((array1 as bitarray - array2 as bitarray)as array)
-	),
-	fn shared = (
-		array_same = sort ((array1 as bitarray * array2 as bitarray)as array)
-	)
+    array1, 
+    array2,
+    fn diff = (
+        array_diff = sort ((array1 as bitarray - array2 as bitarray)as array)
+    ),
+    fn shared = (
+        array_same = sort ((array1 as bitarray * array2 as bitarray)as array)
+    )
 )
 
 comp = compare_array array1:array1 array2:array2
